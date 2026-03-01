@@ -1,0 +1,68 @@
+{
+  "name": "@gagandeep023/spore-field",
+  "version": "0.1.0",
+  "description": "A turn-based territory control browser game - grow spores, spread across the field, outcompete the AI",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "exports": {
+    "./frontend": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./types": {
+      "types": "./dist/types.d.ts",
+      "import": "./dist/types.js",
+      "require": "./dist/types.cjs"
+    },
+    "./frontend/styles.css": "./dist/spore-field.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "spore-field",
+    "browser-game",
+    "canvas",
+    "react",
+    "typescript",
+    "strategy-game",
+    "territory-control",
+    "hex-grid"
+  ],
+  "author": "Gagandeep Bhatia <gagandeepbhatia2303@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gagandeep023/spore-field.git"
+  },
+  "homepage": "https://github.com/Gagandeep023/spore-field#readme",
+  "bugs": {
+    "url": "https://github.com/Gagandeep023/spore-field/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
+  }
+}

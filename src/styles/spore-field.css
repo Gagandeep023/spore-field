@@ -1,0 +1,260 @@
+.sf-game {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  overflow: hidden;
+}
+
+.sf-theme-dark {
+  background: #0a0a0a;
+  color: #e0e0e0;
+}
+
+/* Rules Overlay */
+.sf-rules-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(10, 10, 10, 0.95);
+}
+
+.sf-rules-content {
+  max-width: 420px;
+  padding: 32px;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  background: #111;
+  text-align: left;
+}
+
+.sf-rules-title {
+  margin: 0 0 8px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #64ffda;
+  text-align: center;
+}
+
+.sf-rules-tagline {
+  margin: 0 0 24px;
+  font-size: 14px;
+  color: #888;
+  text-align: center;
+  font-style: italic;
+}
+
+.sf-rules-section {
+  margin-bottom: 16px;
+}
+
+.sf-rules-section h3 {
+  margin: 0 0 6px;
+  font-size: 14px;
+  color: #64ffda;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.sf-rules-section p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #ccc;
+}
+
+.sf-rules-list {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 13px;
+  line-height: 1.8;
+  color: #ccc;
+}
+
+/* HUD */
+.sf-hud {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 16px;
+  background: rgba(20, 20, 20, 0.9);
+  border-bottom: 1px solid #2a2a2a;
+  z-index: 10;
+}
+
+.sf-hud-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.sf-hud-label {
+  font-size: 13px;
+  color: #888;
+}
+
+.sf-hud-territory {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.sf-hud-player {
+  color: #64ffda;
+}
+
+.sf-hud-ai {
+  color: #ff6b6b;
+}
+
+.sf-hud-nutrient {
+  font-size: 13px;
+  color: #ffcc00;
+  font-weight: 600;
+}
+
+.sf-sacrifice-hint {
+  font-size: 11px;
+  color: #ffcc00;
+}
+
+/* Canvas */
+.sf-canvas-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.sf-canvas {
+  cursor: pointer;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Buttons */
+.sf-btn {
+  padding: 8px 20px;
+  border: 1px solid #64ffda;
+  border-radius: 4px;
+  background: transparent;
+  color: #64ffda;
+  font-family: inherit;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.sf-btn:hover {
+  background: #64ffda;
+  color: #0a0a0a;
+}
+
+.sf-btn-primary {
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 32px;
+  font-size: 15px;
+}
+
+.sf-btn-small {
+  padding: 4px 10px;
+  font-size: 12px;
+}
+
+.sf-btn-sacrifice {
+  border-color: #ffcc00;
+  color: #ffcc00;
+}
+
+.sf-btn-sacrifice:hover {
+  background: #ffcc00;
+  color: #0a0a0a;
+}
+
+.sf-btn-active {
+  background: #ffcc00;
+  color: #0a0a0a;
+}
+
+/* GameOver Overlay */
+.sf-gameover-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(10, 10, 10, 0.92);
+}
+
+.sf-gameover-content {
+  max-width: 360px;
+  padding: 32px;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  background: #111;
+  text-align: center;
+}
+
+.sf-gameover-title {
+  margin: 0 0 20px;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.sf-gameover-title.sf-win {
+  color: #64ffda;
+}
+
+.sf-gameover-title.sf-lose {
+  color: #ff6b6b;
+}
+
+.sf-gameover-stats {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.sf-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.sf-stat-label {
+  font-size: 11px;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.sf-stat-value {
+  font-size: 22px;
+  font-weight: 700;
+  color: #e0e0e0;
+}
+
+.sf-gameover-highscore {
+  margin: 0 0 12px;
+  font-size: 14px;
+  color: #ffcc00;
+  font-weight: 600;
+}
+
+.sf-gameover-best {
+  margin: 0 0 12px;
+  font-size: 12px;
+  color: #888;
+}
