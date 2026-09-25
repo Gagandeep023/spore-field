@@ -20,7 +20,9 @@ function App() {
   return (
     <SporeField
       onGameOver={({ winner, playerPercent, aiPercent, turns }) => {
-        console.log(`${winner} won with ${playerPercent}% in ${turns} turns`);
+        console.log(
+          `${winner} won with ${playerPercent}% in ${turns} turns`,
+        );
       }}
     />
   );

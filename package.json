@@ -1,6 +1,6 @@
 {
   "name": "@gagandeep023/spore-field",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A turn-based territory control browser game - grow spores, spread across the field, outcompete the AI",
   "main": "dist/index.cjs",
   "module": "dist/index.js",
